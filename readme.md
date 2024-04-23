@@ -39,7 +39,8 @@ It is a blog application made by using django, react and postgreSQL stack. Some 
 3. Setup backend(Django backend).
 4. Setup Frontend(React App)
 
-[Api Documentation](https://documenter.getpostman.com/view/28093502/2sA3Bq4Avt)
+
+<a href="https://documenter.getpostman.com/view/28093502/2sA3Bq4Avt" target="_blank">API Documentation</a>
 
 ### Clone project locally
 
