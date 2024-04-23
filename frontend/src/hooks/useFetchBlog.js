@@ -11,7 +11,7 @@ const useFetchBlog = () => {
     const fetchBlog = async () => {
     try {
         setLoading(true);
-        const response = await axiosInstance.get('/blogs/?page=1');
+        const response = await axiosInstance.get('/blogs/list/?page=1');
         setData(response.data);
         setError(null);
     } catch (error) {

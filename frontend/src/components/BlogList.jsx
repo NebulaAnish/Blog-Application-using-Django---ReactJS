@@ -2,7 +2,7 @@ import BlogView from "./BlogView";
 import PropTypes from "prop-types";
 import Container from './Container';
 import { paths } from "../routes/path";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import useApi from "../hooks/useApi";
 import { useEffect } from "react";
 
@@ -31,7 +31,11 @@ const BlogList = ({ blogList }) => {
                 <h2 className="text-3xl font-bold">Welcome to the Blog List...</h2>
             </div>
             <div className="text-center">
-            <button className="mx-auto p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-500">Create new</button>
+            <button className="mx-auto p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-500">
+            <Link to={paths.blog.create}>Create New</Link>
+            </button>
+
+
             </div>
 
             <Container>
