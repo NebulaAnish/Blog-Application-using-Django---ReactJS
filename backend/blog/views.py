@@ -5,10 +5,17 @@ from .models import Blog
 from .serializers import BlogSerializer
 
 
+class BlogReadView(generics.ListAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+    pagination_class = PageNumberPagination
+
+
 class BlogListCreateAPIView(generics.ListCreateAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
     pagination_class = PageNumberPagination
+    permission_classes = [IsAuthenticated]
     
     # To save the current user as author
     def perform_create(self, serializer):
