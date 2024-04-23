@@ -19,7 +19,7 @@ export default function LoginSection() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-4 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -36,7 +36,7 @@ export default function LoginSection() {
                                 type="text"
                                 required
                                 className="rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-slate-500 focus:border-slate-500 focus:z-10 sm:text-sm"
-                                placeholder="Username"
+                                placeholder="Email"
                             />
                         </div>
                         <div>
@@ -50,15 +50,17 @@ export default function LoginSection() {
                                 placeholder="Password"
                             />
                         </div>
-                        {/* <div className="self-end">
+                        <div className="self-end">
                             <Link to={paths.auth.forgotPassword} className="font-medium text-slate-600 hover:text-slate-500">
                                 Forgot Password?
                             </Link>
-                        </div> */}
+                        </div>
                     </div>
 
                     <div>
-                        <button type="submit" className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-slate-600 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500">
+                        <button
+                        onClick={paths.auth.login}
+                        type="submit" className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-slate-600 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500">
                             Sign in
                         </button>
                     </div>

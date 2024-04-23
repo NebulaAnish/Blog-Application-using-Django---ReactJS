@@ -27,7 +27,7 @@ const BlogView = ({ blog, onEdit, onDelete, onView }) => {
                 </Transition>
             </Popover>
             <h1 className="text-2xl font-bold">{blog.title}</h1>
-            <p className="text-gray-500 text-sm">By {blog.author}</p>
+            {/* <p className="text-gray-500 text-sm">By {blog.author}</p> */}
             <p className="text-gray-500 text-sm">{moment(blog.date).format('MMMM Do YYYY')}</p>
             <p className="pt-4 overflow-hidden overflow-ellipsis whitespace-nowrap">{blog.content}</p>
         </div>
