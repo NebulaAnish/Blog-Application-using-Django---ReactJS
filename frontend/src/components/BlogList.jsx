@@ -30,6 +30,9 @@ const BlogList = ({ blogList }) => {
             <div className="flex items-center justify-center p-8">
                 <h2 className="text-3xl font-bold">Welcome to the Blog List...</h2>
             </div>
+            <div className="text-center">
+            <button className="mx-auto p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-500">Create new</button>
+            </div>
 
             <Container>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-6 gap-x-4 py-6">
