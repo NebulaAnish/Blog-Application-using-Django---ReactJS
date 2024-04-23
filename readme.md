@@ -73,7 +73,9 @@ Below are steps to setup databse using shell. You can perform similar actions us
    `$ pip install -r requirements.txt`
 5. Run migrations to your database. <br>
    `$ python manage.py migrate`
-6. Run server. <br>
+6. Run tests (Optional). <br> 
+   `$ python manage.py test`
+7. Run server. <br>
    `$ python manage.py runserver`
 
 ### Setting up Frontend Server
