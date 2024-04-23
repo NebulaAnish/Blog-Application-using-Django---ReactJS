@@ -5,6 +5,8 @@
 2. Setup backend(Django backend).
 3. Setup Frontend(React App)
 
+[Api Documentation](https://documenter.getpostman.com/view/28093502/2sA3Bq4Avt)
+
 ### Setting up Database
 Below are steps to setup databse using shell. You can perform similar actions using GUI tools by noting down the credentials below.
 1. Open postgres shell: <br>
@@ -17,3 +19,17 @@ Below are steps to setup databse using shell. You can perform similar actions us
     `CREATE DATABASE blog;`
 4. Exit psql shell: <br>
     `\q`
+
+
+### Setting up Backend Server
+1. Navigate to the backend folder.
+2. Create a virtual environment. <br>
+    `$ python -m venv .venv`
+3. Activate virtual environment. <br>
+    On Linux/Mac: `$ source .venv/bin/activate` 
+4. Install required dependencies. <br>
+    `$ pip install -r requirements.txt`
+5. Run migrations to your database. <br>
+    `$ python manage.py migrate`
+6. Run server. <br>
+    `$ python manage.py runserver`
