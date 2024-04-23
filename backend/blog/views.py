@@ -8,7 +8,6 @@ from .serializers import BlogSerializer
 class BlogListCreateAPIView(generics.ListCreateAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
-    permission_classes = [IsAuthenticated]
     pagination_class = PageNumberPagination
     
     # To save the current user as author
@@ -18,6 +17,6 @@ class BlogListCreateAPIView(generics.ListCreateAPIView):
 class BlogRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
     lookup_field = 'slug'
     
