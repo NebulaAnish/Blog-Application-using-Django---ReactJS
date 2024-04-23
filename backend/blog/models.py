@@ -20,11 +20,11 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, max_length=200, blank=True)
     content = models.TextField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     published = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    tags = models.ManyToManyField(Tag, related_name='blog_posts')
+    tags = models.ManyToManyField(Tag, related_name='blog_posts', blank=True)
 
     # To retrive only the published blogs
     objects = BlogPostManager()
